@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Equipos - ReparaTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-tools text-2xl"></i>
+                <span class="text-xl font-bold">ReparaTech</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="dashboard.html" class="hover:text-blue-200 transition">
+                    <i class="fas fa-tachometer-alt mr-1"></i> Panel
+                </a>
+                <a href="create-repair.html" class="hover:text-blue-200 transition">
+                    <i class="fas fa-plus-circle mr-1"></i> Nueva Reparación
+                </a>
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 hover:text-blue-200">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden group-hover:block">
+                        <a href="profile.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Perfil</a>
+                        <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Equipment Catalog -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-2xl font-bold text-gray-800">Catálogo de Equipos</h1>
+            <div class="flex space-x-2">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded flex items-center">
+                    <i class="fas fa-plus mr-2"></i> Nuevo Equipo
+                </button>
+                <div class="relative">
+                    <input type="text" placeholder="Buscar equipos..." 
+                        class="pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                    <div class="absolute left-3 top-2.5 text-gray-400">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Equipment Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Equipment Card 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg" 
+                        alt="Laptop Dell XPS 15" 
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg">Laptop Dell XPS 15</h3>
+                            <p class="text-gray-500 text-sm">ID: EQ-001</p>
+                        </div>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Disponible</span>
+                    </div>
+                    <p class="text-gray-600 mt-2 text-sm">15.6", Intel i7, 16GB RAM, 512GB SSD</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <div>
+                            <p class="text-sm text-gray-500">Última reparación: 15/10/2023</p>
+                            <p class="text-sm text-gray-500">Reparaciones totales: 3</p>
+                        </div>
+                        <a href="create-repair.html?equipment=EQ-001" 
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm flex items-center">
+                            <i class="fas fa-wrench mr-1"></i> Reparar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Equipment Card 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg" 
+                        alt="iPhone 13 Pro" 
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg">iPhone 13 Pro</h3>
+                            <p class="text-gray-500 text-sm">ID: EQ-002</p>
+                        </div>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">En Reparación</span>
+                    </div>
+                    <p class="text-gray-600 mt-2 text-sm">6.1", 128GB, iOS 15</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <div>
+                            <p class="text-sm text-gray-500">Última reparación: 18/10/2023</p>
+                            <p class="text-sm text-gray-500">Reparaciones totales: 1</p>
+                        </div>
+                        <a href="create-repair.html?equipment=EQ-002" 
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm flex items-center">
+                            <i class="fas fa-wrench mr-1"></i> Reparar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Equipment Card 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg" 
+                        alt="Monitor Samsung 27" 
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg">Monitor Samsung 27"</h3>
+                            <p class="text-gray-500 text-sm">ID: EQ-003</p>
+                        </div>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Disponible</span>
+                    </div>
+                    <p class="text-gray-600 mt-2 text-sm">27", 4K UHD, 144Hz, 1ms</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <div>
+                            <p class="text-sm text-gray-500">Última reparación: 20/10/2023</p>
+                            <p class="text-sm text-gray-500">Reparaciones totales: 2</p>
+                        </div>
+                        <a href="create-repair.html?equipment=EQ-003" 
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm flex items-center">
+                            <i class="fas fa-wrench mr-1"></i> Reparar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Equipment Card 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.pexels.com/photos/2582928/pexels-photo-2582928.jpeg" 
+                        alt="MacBook Pro 16" 
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg">MacBook Pro 16"</h3>
+                            <p class="text-gray-500 text-sm">ID: EQ-004</p>
+                        </div>
+                        <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Fuera de Servicio</span>
+                    </div>
+                    <p class="text-gray-600 mt-2 text-sm">M1 Pro, 16GB RAM, 1TB SSD</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <div>
+                            <p class="text-sm text-gray-500">Última reparación: 10/10/2023</p>
+                            <p class="text-sm text-gray-500">Reparaciones totales: 5</p>
+                        </div>
+                        <a href="create-repair.html?equipment=EQ-004" 
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm flex items-center">
+                            <i class="fas fa-wrench mr-1"></i> Reparar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Equipment Card 5 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg" 
+                        alt="iPad Pro 12.9" 
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg">iPad Pro 12.9"</h3>
+                            <p class="text-gray-500 text-sm">ID: EQ-005</p>
+                        </div>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Disponible</span>
+                    </div>
+                    <p class="text-gray-600 mt-2 text-sm">M1, 256GB, Wi-Fi + Cellular</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <div>
+                            <p class="text-sm text-gray-500">Última reparación: 05/10/2023</p>
+                            <p class="text-sm text-gray-500">Reparaciones totales: 1</p>
+                        </div>
+                        <a href="create-repair.html?equipment=EQ-005" 
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm flex items-center">
+                            <i class="fas fa-wrench mr-1"></i> Reparar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add New Equipment Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition border-2 border-dashed border-gray-300 flex items-center justify-center">
+                <a href="#" class="text-center p-6 w-full">
+                    <div class="text-blue-600 mb-2">
+                        <i class="fas fa-plus-circle text-4xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Agregar Nuevo Equipo</h3>
+                    <p class="text-gray-600 text-sm">Haz clic para registrar un nuevo equipo</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-8 flex justify-center">
+            <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                    <span class="sr-only">Anterior</span>
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                <a href="#" aria-current="page" class="z-10 bg-blue-50 border-blue-500 text-blue-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                    1
+                </a>
+                <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                    2
+                </a>
+                <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                    3
+                </a>
+                <span class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700">
+                    ...
+                </span>
+                <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                    8
+                </a>
+                <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                    <span class="sr-only">Siguiente</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 ReparaTech - Sistema de Gestión de Reparaciones</p>
+        </div>
+    </footer>
+</body>
+</html>
