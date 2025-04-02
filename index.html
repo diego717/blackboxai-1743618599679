@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Reparaciones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <style>
+        .hero-bg {
+            background-image: url('https://images.pexels.com/photos/356048/pexels-photo-356048.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-tools text-2xl"></i>
+                <span class="text-xl font-bold">ReparaTech</span>
+            </div>
+            <div class="space-x-4">
+                <a href="login.html" class="hover:text-blue-200 transition">Iniciar Sesión</a>
+                <a href="register.html" class="bg-white text-blue-600 px-4 py-2 rounded hover:bg-blue-100 transition">Registrarse</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-96 flex items-center justify-center text-white">
+        <div class="text-center bg-black bg-opacity-50 p-8 rounded-lg">
+            <h1 class="text-4xl font-bold mb-4">Gestión de Reparaciones de Equipos</h1>
+            <p class="text-xl mb-6">Sistema completo para el seguimiento y gestión de reparaciones técnicas</p>
+            <a href="register.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition">Comenzar Ahora</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Nuestras Funcionalidades</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-clipboard-list text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Seguimiento de Reparaciones</h3>
+                    <p class="text-gray-600">Monitorea el estado de tus equipos en reparación en tiempo real.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-tools text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Catálogo de Equipos</h3>
+                    <p class="text-gray-600">Registro completo de todos los equipos disponibles.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-chart-line text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Reportes y Estadísticas</h3>
+                    <p class="text-gray-600">Genera reportes detallados del estado de las reparaciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 ReparaTech - Sistema de Gestión de Reparaciones</p>
+        </div>
+    </footer>
+</body>
+</html>
