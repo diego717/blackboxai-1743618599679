@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario - ReparaTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-tools text-2xl"></i>
+                <span class="text-xl font-bold">ReparaTech</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="dashboard.html" class="hover:text-blue-200 transition">
+                    <i class="fas fa-tachometer-alt mr-1"></i> Panel
+                </a>
+                <a href="equipment.html" class="hover:text-blue-200 transition">
+                    <i class="fas fa-laptop mr-1"></i> Equipos
+                </a>
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 hover:text-blue-200">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden group-hover:block">
+                        <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-2xl font-bold text-gray-800">Perfil de Usuario</h1>
+                <a href="dashboard.html" class="text-blue-600 hover:text-blue-800 flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i> Volver
+                </a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <!-- Profile Header -->
+                <div class="bg-blue-600 text-white px-6 py-4">
+                    <div class="flex items-center">
+                        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center text-blue-600 mr-4">
+                            <i class="fas fa-user text-3xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold">Administrador</h2>
+                            <p class="text-blue-100">admin@reparatech.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Details -->
+                <div class="p-6">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Personal Info -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800 border-b pb-2">Información Personal</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-gray-600 text-sm mb-1">Nombre Completo</label>
+                                    <p class="font-medium">Administrador del Sistema</p>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-600 text-sm mb-1">Correo Electrónico</label>
+                                    <p class="font-medium">admin@reparatech.com</p>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-600 text-sm mb-1">Teléfono</label>
+                                    <p class="font-medium">+1 234 567 8900</p>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-600 text-sm mb-1">Rol</label>
+                                    <p class="font-medium">
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Administrador</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Account Info -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800 border-b pb-2">Configuración de Cuenta</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-gray-600 text-sm mb-1">Nombre de Usuario</label>
+                                    <p class="font-medium">admin</p>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-600 text-sm mb-1">Último Acceso</label>
+                                    <p class="font-medium">Hoy, 10:45 AM</p>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-600 text-sm mb-1">Estado</label>
+                                    <p class="font-medium">
+                                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Activo</span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-600 text-sm mb-1">Miembro desde</label>
+                                    <p class="font-medium">15/01/2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Stats -->
+                    <div class="mt-8">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-800 border-b pb-2">Estadísticas</h3>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="bg-gray-50 p-4 rounded border border-gray-200">
+                                <p class="text-gray-500 text-sm">Reparaciones Creadas</p>
+                                <p class="text-2xl font-bold">142</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded border border-gray-200">
+                                <p class="text-gray-500 text-sm">Reparaciones Completadas</p>
+                                <p class="text-2xl font-bold">98</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded border border-gray-200">
+                                <p class="text-gray-500 text-sm">Equipos Registrados</p>
+                                <p class="text-2xl font-bold">35</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="mt-8">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-800 border-b pb-2">Actividad Reciente</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-600 p-2 rounded-full mr-3">
+                                    <i class="fas fa-wrench"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Actualizó el estado de REP-012</p>
+                                    <p class="text-sm text-gray-500">Hoy, 09:30 AM - Cambiado a "Completado"</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-green-100 text-green-600 p-2 rounded-full mr-3">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Registró nuevo equipo</p>
+                                    <p class="text-sm text-gray-500">Ayer, 03:15 PM - MacBook Pro 16" (EQ-036)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 text-purple-600 p-2 rounded-full mr-3">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Agregó nuevo técnico</p>
+                                    <p class="text-sm text-gray-500">Ayer, 10:00 AM - Carlos Méndez</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="mt-8 pt-6 border-t border-gray-200 flex justify-end space-x-4">
+                        <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                            <i class="fas fa-lock mr-2"></i> Cambiar Contraseña
+                        </button>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+                            <i class="fas fa-edit mr-2"></i> Editar Perfil
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 ReparaTech - Sistema de Gestión de Reparaciones</p>
+        </div>
+    </footer>
+</body>
+</html>
